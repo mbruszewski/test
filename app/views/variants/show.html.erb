@@ -1,0 +1,14 @@
+<p>
+  <strong>Name:</strong>
+  <%= @variant.name %>
+</p>
+<p>
+  <strong>Dropdown:</strong>
+  <%= @variant.dropdown_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_variant_path(@variant) %> |
+  <%= link_to "Destroy", @variant, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", variants_path %>
+</p>

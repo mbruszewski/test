@@ -1,0 +1,11 @@
+<%= form_for @dropdown do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :item %><br />
+    <%= f.select(:item_id, Item.all.collect { |p| [p.name, p.id] }) %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

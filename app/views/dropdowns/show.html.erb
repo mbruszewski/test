@@ -1,0 +1,14 @@
+<p>
+  <strong>Name:</strong>
+  <%= @dropdown.name %>
+</p>
+<p>
+  <strong>Item:</strong>
+  <%= @dropdown.item_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_dropdown_path(@dropdown) %> |
+  <%= link_to "Destroy", @dropdown, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", dropdowns_path %>
+</p>

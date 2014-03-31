@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Item</th>
+  </tr>
+  <% for dropdown in @dropdowns %>
+    <tr>
+      <td><%= dropdown.name %></td>
+      <td><%= dropdown.item_id %></td>
+      <td><%= link_to "Show", dropdown %></td>
+      <td><%= link_to "Edit", edit_dropdown_path(dropdown) %></td>
+      <td><%= link_to "Destroy", dropdown, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Dropdown", new_dropdown_path %></p>

@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Dropdown</th>
+  </tr>
+  <% for variant in @variants %>
+    <tr>
+      <td><%= variant.name %></td>
+      <td><%= variant.dropdown_id %></td>
+      <td><%= link_to "Show", variant %></td>
+      <td><%= link_to "Edit", edit_variant_path(variant) %></td>
+      <td><%= link_to "Destroy", variant, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Variant", new_variant_path %></p>

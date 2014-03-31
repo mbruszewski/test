@@ -1,0 +1,23 @@
+<div class="items">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Comment</th>
+      <th>Private</th>
+      <th>Price</th>
+    </tr>
+    <% for item in @items %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.comment %></td>
+        <td><%= item.private %></td>
+        <td><%= item.price %></td>
+        <td><%= link_to "Show", item %></td>
+        <td><%= link_to "Edit", edit_item_path(item) %></td>
+        <td><%= link_to "Destroy", item, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <p><%= link_to "New Item", new_item_path %></p>
+</div>
